@@ -1,2 +1,2 @@
-# Alternativet
-Comm/IT exam project
+# Alternativet: Politisk kampagne
+Kommunikation/IT C eksamens projekt
