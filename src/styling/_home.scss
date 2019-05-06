@@ -1,0 +1,108 @@
+
+
+#home {
+
+  .background,
+  .foreground {
+
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+
+    .logo {
+    
+      position: absolute;
+      top: 196px; left: 50%;
+      transform: translateX(-50%);
+
+      height: 256px;
+    
+    }
+
+    .navelem {
+
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 1.2;
+      width: 100%;
+      cursor: pointer;
+
+      .overlay {
+
+        display: block;
+        position: absolute;
+        bottom: 8px; left: 50%;
+        transform: translateX(-50%);
+        
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: height 350ms $transbase,
+          top 120ms $transbase;
+
+        &:before {
+
+          display: block;
+          position: absolute;
+          bottom: 0; left: 50%;
+          transform: translateX(-50%);
+          color: $secondary;
+
+        }
+
+      }
+
+      &.emi { 
+        
+        bottom: 240px; 
+        .overlay:before { content: 'Drop flygtninge sludren'; }
+
+      }
+
+      &.env { 
+        
+        bottom: 128px;
+        .overlay:before { content: 'Påbegynd miljø debatten'; }
+
+      }
+
+      &:hover .overlay {
+
+        height: 100%;
+
+      }
+
+      &:active .overlay {
+
+        top: 0;
+
+      }
+
+    }
+
+  }
+
+  .texture {
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120%; height: 120%;
+
+    background-size: 200px;
+    filter: grayscale(100%);
+    opacity: .15;
+
+    pointer-events: none;
+    
+
+  }
+
+}
