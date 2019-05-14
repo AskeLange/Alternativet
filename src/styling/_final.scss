@@ -1,0 +1,70 @@
+
+
+#final .content-container {
+
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+
+  .title,
+  .subtitle {
+    
+    display: none;
+
+  }
+
+  .logo {
+
+    display: block;
+    position: relative;
+    width: 340px; height: 96px;
+    background-color: $primary;
+
+    .logo-inner {
+
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+
+      color: $accent;
+      font-size: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+    }
+
+    &:before,
+    &:after {
+
+      content: '';
+      display: block;
+
+      position: absolute;
+      top: 0;
+
+      border: 12px solid $primary;
+      border-top-width: calc(96px / 2);
+      border-bottom-width: calc(96px / 2);
+
+    }
+
+    &:before {
+
+      left: -24px;
+      border-left-color: transparent;
+      border-top-color: transparent;
+
+    }
+
+    &:after {
+
+      right: -24px;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+
+    }
+
+  }
+
+}

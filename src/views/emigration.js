@@ -36,7 +36,7 @@ export default class EmigrationView
         
         <div className="fg" style={{ top: `${this.state.fgpos.y}px`, left: `${this.state.fgpos.x}px` }}>
           <div className="title">
-            Halli halløj, Buster! {/* Drop indvandre sludren */}
+            Drop indvandre sludren
           </div>
 
           <div className="text">
