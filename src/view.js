@@ -40,15 +40,16 @@ export default class View
   // Component did mount
   componentDidMount () {
 
-    // Listens to store
-    this.unsub = this.props.store.subscribe (
-      this.onStoreChange.bind (this)
-    );
 
     // Appends self
     this.props.store.dispatch ( append_view (
       this.props.label, this.props.index
     ));
+
+    // Listens to store
+    this.unsub = this.props.store.subscribe (
+      this.onStoreChange.bind (this)
+    );
 
   }
 

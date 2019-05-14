@@ -1,88 +1,102 @@
 
 
+@keyframes breathe {
+  0% { background-size: 151%; }
+  50% { background-size: 156%; }
+  100% { background-size: 151%; }
+}
+
 #home {
 
   .background,
   .foreground {
 
     position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
+    top: 32px; left: 32px;
+    width: calc(100% - 64px);
+    height: calc(100% - 64px);
 
-    .logo {
-    
+    transform-origin: center;
+
+
+    #bg, #fg {
+
       position: absolute;
-      top: 196px; left: 50%;
-      transform: translateX(-50%);
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
 
+    }
+
+    .image {
+      
+      position: absolute;
+      bottom: 280px; left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+
+      width: 256px;
       height: 256px;
-    
+      background-position: center;
+      background-size: cover;
+      z-index: 0;
+
+      // animation: breathe 3000ms $transbase infinite;
+
     }
 
     .navelem {
 
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      text-transform: uppercase;
-      text-align: center;
+      left: 50%; transform: translateX(-50%);
+      font-size: 64px;
       font-weight: 900;
-      font-size: 80px;
-      line-height: 1.2;
-      width: 100%;
-      cursor: pointer;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: transparent;
+      transition: 200ms $transbase;
 
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: $primary;
+
+      &.emi { bottom: 270px; }
+      &.env { bottom: 188px; }
+      &.emi .overlay:before { content: 'Drop indvandre sludren'; }
+      &.env .overlay:before { content: 'Igangsæt miljø debatten'; }
+      
       .overlay {
 
-        display: block;
         position: absolute;
-        bottom: 8px; left: 50%;
+        bottom: 24px; left: 50%;
         transform: translateX(-50%);
-        
-        overflow: hidden;
-        width: 100%;
-        height: 0;
-        transition: height 350ms $transbase,
-          top 120ms $transbase;
+        width: 100%; height: 0;  
 
+        overflow: hidden;
+        transition: 300ms $transbase;
+        
         &:before {
 
           display: block;
           position: absolute;
-          bottom: 0; left: 50%;
+          bottom: -24px; left: 50%;
           transform: translateX(-50%);
-          color: $secondary;
+          font-size: 64px;
+          font-weight: 900;
+          text-transform: uppercase;
+          white-space: nowrap;
+          color: $primary;
 
         }
 
       }
 
-      &.emi { 
-        
-        bottom: 240px; 
-        .overlay:before { content: 'Drop flygtninge sludren'; }
-
-      }
-
-      &.env { 
-        
-        bottom: 128px;
-        .overlay:before { content: 'Påbegynd miljø debatten'; }
-
-      }
-
       &:hover .overlay {
 
-        height: 100%;
+        height: calc(100% - 48px);
 
       }
 
-      &:active .overlay {
-
-        top: 0;
-
+      &:active {
+        opacity: .7;
       }
 
     }
@@ -101,7 +115,8 @@
     opacity: .15;
 
     pointer-events: none;
-    
+
+    display: none;
 
   }
 

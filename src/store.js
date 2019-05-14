@@ -6,9 +6,10 @@ import thunk from 'redux-thunk';
 
 // Reducers
 import navigation from './reducers/navigation';
+import cursor from './reducers/cursor';
 
 // Root reducer, dev tools n' middleware
-const root_reducer = combineReducers ({ navigation });
+const root_reducer = combineReducers ({ navigation, cursor });
 const compose_enhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const middleware = compose_enhancers ? compose_enhancers (applyMiddleware (thunk)) : applyMiddleware (thunk);
 

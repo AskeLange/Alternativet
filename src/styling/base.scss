@@ -2,13 +2,16 @@
 
 // Ext. Imports
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,900);
+@import url(https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300,700);
 
 // Fields
 $fontstack: 'Poppins', sans-serif;
+$sfontstack: 'Frank Ruhl Libre', serif;
 $transbase: cubic-bezier(.7,0,.3,1);
-$primary: #3BB273;
+$bouncytrans: cubic-bezier(.5,-.8,.5,1.8);
+$primary: #6C8C3B;
 $secondary: #1D1D1B;
-$accent: #EEEEE8;
+$accent: #F1E0C5;
 
 // Sjiz
 body {
@@ -19,8 +22,10 @@ body {
   overflow: hidden;
   font-family: $fontstack;
   
+  
   * {
-    
+
+    cursor: none !important;
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
        -khtml-user-select: none; /* Konqueror HTML */
@@ -28,6 +33,42 @@ body {
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
+    
+  }
+
+  #cursor {
+
+    position: fixed;
+    transform: translate(-50%,-50%);
+
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background-color: $accent;
+    mix-blend-mode: difference;
+
+    transition: width 250ms $bouncytrans,
+      height 250ms $bouncytrans,
+      background-color 250ms $transbase;
+
+    pointer-events: none;
+    z-index: 9;
+
+    opacity: .8;
+
+    &.s1 {
+
+      width: 48px;
+      height: 48px;
+      opacity: .8;
+
+    }
+
+  }
+
+  &:active #cursor {
+
+    width: 16px;
+    height: 16px;
 
   }
 
@@ -46,7 +87,9 @@ body {
       color: $primary;
 
       &:nth-child(2n) {
-        background-color: $secondary;
+
+        // background-color: $secondary;
+      
       }
       
     }
@@ -54,7 +97,7 @@ body {
   }
   
   #navigation {
-    
+
     z-index: 9;
     position: fixed;
     bottom: 32px; left: 50%;
@@ -70,6 +113,7 @@ body {
       width: 10px; height: 10px;
       border: 1px solid $primary;
       transform: rotate(45deg);
+
         
       &:before {
         
@@ -94,7 +138,20 @@ body {
     
   }
 
+  #logo {
+
+    position: fixed;
+    top: 48px; left: 48px;
+    height: 32px;
+
+    fill: $primary;
+
+
+  }
+
 }
 
 // Int. Imports
 @import './home';
+@import './emigration';
+@import './environment';
