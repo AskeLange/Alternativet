@@ -53,7 +53,6 @@
       text-transform: uppercase;
       white-space: nowrap;
       color: transparent;
-      transition: 200ms $transbase;
 
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: $primary;
@@ -84,6 +83,9 @@
           text-transform: uppercase;
           white-space: nowrap;
           color: $primary;
+          z-index: 0;
+
+          transition: 120ms $bouncytrans;
 
         }
 
@@ -95,8 +97,10 @@
 
       }
 
-      &:active {
-        opacity: .7;
+      &:active .overlay:before {
+        
+        color: lighten($primary, 5%);
+
       }
 
     }
