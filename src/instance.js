@@ -16,7 +16,7 @@ import FinalView from './views/final';
 let canScroll = true;
 
 // Instance Component
-export default hot (module) (class AppInstance
+export default class AppInstance
   extends React.Component {
 
   // Constructor
@@ -169,4 +169,4 @@ export default hot (module) (class AppInstance
     this.unsub ();
   }
 
-});
+};
