@@ -36,11 +36,12 @@ export default class EmigrationView
         
         <div className="fg" style={{ top: `${this.state.fgpos.y}px`, left: `${this.state.fgpos.x}px` }}>
           <div className="title">
-            Drop indvandre sludren
+            Flygtninge er medmennesker
           </div>
 
           <div className="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Alternativet ønsker et samfund bygget på solidaritet, med respekt for de enkelte mennesker og for deres kulturelle ophav. Alternativets asylpolitik skal ses i den sammenhæng og som et svar på den empatikrise, vi oplever i verden.<br /><br />
+            Flygtninge er først og sidst vores medmennesker. Ikke en belastning, der skal lukkes ude eller begrænses, men mennesker i en dybt ulykkelig situation, som vi har en pligt til at hjælpe.
           </div>
         </div>
 

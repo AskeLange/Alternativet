@@ -38,7 +38,7 @@ export default class FinalView
         </a>
 
         <div className="subtitle">
-          Det tager kun fem minutter.
+          Det tager kun fem minutter ...
         </div>
 
 

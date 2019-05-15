@@ -38,7 +38,7 @@ export default class HomeView
             onClick={this.switch.bind(this,'emigration')}
             onMouseEnter={this.setCursorState.bind (this, Cursor.HOVER)}
             onMouseLeave={this.setCursorState.bind (this, Cursor.INITIAL)}>
-            Drop indvandre sludren
+            Flygtninge er medmennesker
             <div className="overlay"></div>
           </div>
 
@@ -46,7 +46,7 @@ export default class HomeView
             onClick={this.switch.bind(this,'environment')}
             onMouseEnter={this.setCursorState.bind (this, Cursor.HOVER)}
             onMouseLeave={this.setCursorState.bind (this, Cursor.INITIAL)}>
-            Igangsæt miljø debatten
+            Miljøet øverst på dagsordnen
             <div className="overlay"></div>
           </div>
         </div>

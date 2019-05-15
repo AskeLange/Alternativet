@@ -36,11 +36,12 @@ export default class EnvironmentView
         
         <div className="fg" style={{ top: `${this.state.fgpos.y}px`, left: `${this.state.fgpos.x}px` }}>
           <div className="title">
-            Igangsæt miljø debatten
+            Miljøet øverst på dagsordnen
           </div>
 
           <div className="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Alternativet ønsker at sætte miljømæssig bæredygtighed øverst på dagsordenen. Vi vil arbejde for en effektiv og kontrolleret bæredygtig omstilling. En omstilling, der så vidt muligt sker på menneskehedens præmisser – for den kommer under alle omstændigheder.<br /><br />
+            Vi vil arbejde hårdt og vedholdende for at udfase det nuværende forbrug af fossile brændstoffer ved i stedet at benytte vedvarende energikilder.
           </div>
         </div>
 
